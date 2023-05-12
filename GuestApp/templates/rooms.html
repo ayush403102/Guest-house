@@ -322,7 +322,7 @@
   <div class="row gx-2">
     {% comment %} {% for room in rooms %} {% endcomment %}
     <div role="button" class="col-md-3 col-sm-4 col-xs-6 border">
-        <img src="{{room.room_image.url}}" alt="room" class="img-fluid">
+        <img src="{% static 'images/acroom.jpg' %}" alt="room" class="img-fluid">
         <div class="room_info">
             <h3>{{ room.room_type }}</h3>
           <p>{{ room.room_description }}</p>
