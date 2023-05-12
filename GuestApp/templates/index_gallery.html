@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -316,12 +318,48 @@
                 <h4 class="text-center py-1">A visual journey of Comfort and Charm</h4>
                 <div class="swiper mySwiper my-5">
                     <div class="swiper-wrapper">
-                        {% for item in gallery %}
+                        {% comment %} {% for item in gallery %} {% endcomment %}
                         <div class="swiper-slide" style="width:30em;">
-                            <a class="fancybox" href="/media/{{item.image}}" style="height:24em;" data-fancybox="Guest"><img
-                                    src="/media/{{item.image}}"></a>
+                            <a class="fancybox" href="{% static 'images/guest_house/img1.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img1.jpeg' %}"></a>
                         </div>
-                        {% endfor %}
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img3.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img3.jpeg' %}"></a>
+                        </div>
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img5.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img5.jpeg' %}"></a>
+                        </div>
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img6.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img6.jpeg' %}"></a>
+                        </div>
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img7.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img7.jpeg' %}"></a>
+                        </div>
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img8.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img8.jpeg' %}"></a>
+                        </div>
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img10.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img10.jpeg' %}"></a>
+                        </div>
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img11.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img11.jpeg' %}"></a>
+                        </div>
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img12.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img12.jpeg' %}"></a>
+                        </div>
+                        <div class="swiper-slide" style="width:30em;">
+                            <a class="fancybox" href="{% static 'images/guest_house/img13.jpeg' %}" style="height:24em;" data-fancybox="Guest"><img
+                                    src="{% static 'images/guest_house/img13.jpeg' %}"></a>
+                        </div>
+                        {% comment %} {% endfor %} {% endcomment %}
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
