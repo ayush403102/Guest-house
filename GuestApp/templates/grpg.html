@@ -1,0 +1,69 @@
+{% extends 'guest_base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Booking</title>
+{% endblock title %}
+
+{% block content %}
+{% if booked %}
+<div class="container p-2 form_view overflow-y-scroll">
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Booking Successful!</h4>
+    <p>Your booking has been confirmed. Please check your email for further details.</p>
+    <hr>
+    <p class="mb-0">Thank you for choosing us.</p>
+  </div>
+{% else %}
+<div class='container p-2 form_view overflow-y-scroll'>
+  <h1 class='text-center'>We have {{room_count}} rooms availabe of {{room_type}} type</h1>
+  <form action="{% url 'booking' %}" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input  class="form-control" id="name" name="name">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="number" class="form-label">Number</label>
+      <input type="number" class="form-control" id="number" name="number">
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Address</label>
+      <input class="form-control" id="address" name="address">
+    </div>
+    <div class="mb-3">
+      <label for="gender" class="form-label">Gender</label>
+      <br>
+      <input type="radio" name="gender" value="male" id='male'>
+      <label for="male" class="form-label">Male</label>
+      <input type="radio" name="gender" value="female" id='female'>
+      <label for="female" class="form-label">Female</label>
+      <input type="radio" name="gender" value="other" id='other'>
+      <label for="other" class="form-label">Other</label>
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" class="form-control" id="age" name="age">
+    </div>
+    <div class="mb-3">
+      <label for="room_count" class="form-label">Number of rooms</label>
+      <input type="number" class="form-control" id="room_count" name="room_count">
+    </div>
+    <div class="mb-3">
+      <label for="checkin" class="form-label">Check in date</label>
+      <input type="date" class="form-control" id="checkin" name="checkin">
+    </div>
+    <div class="mb-3">
+      <label for="checkout" class="form-label">Check out date</label>
+      <input type="date" class="form-control" id="checkout" name="checkout">
+    </div>
+    <input type="hidden" name="room_type" value="{{room_type}}"> 
+    <button type="submit" class="btn btn-primary book_btn">Book</button>
+  </form>
+</div>
+{% endif %}
+{% endblock content %}

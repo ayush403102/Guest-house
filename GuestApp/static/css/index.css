@@ -1,0 +1,49 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+h2{
+    padding: 10px;
+    position: relative;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+p{
+    /* padding: 10px; */
+    margin-left: 1vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.table-responsive{
+    margin-left: 1vw;
+}
+.table{
+    width: 100%;
+
+}
+td{
+    padding: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+tbody tr {
+    background-color: rgb(202, 211, 237);
+
+    
+}
+tbody tr:hover{
+            background-color: rgb(104, 138, 240);
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+}
+
+
+
